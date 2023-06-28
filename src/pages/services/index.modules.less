@@ -1,0 +1,82 @@
+.services-container {
+  background-color: #fff;
+
+  img.services-banner {
+    min-height: 521px;
+    width: 100%;
+    object-fit: over;
+  }
+
+  .services-box {
+    margin: 60px 60px 0;
+
+    .services-design,
+    .services-originality {
+      width: 100%;
+
+      .design-list,
+      .originality-list {
+        width: 100%;
+
+        ul {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 60px;
+
+          li.design-item,
+          li.originality-item {
+            min-width: 459px;
+            min-height: 260px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            .item-content {
+              width: 270px;
+              height: 144px;
+              position: absolute;
+              padding-left: 35px;
+              position: absolute;
+              top: 78px;
+              left: 0;
+              color: #fff;
+              z-index: 1;
+              background-color: rgba(0, 0, 0, 0.6);
+
+              h3.title {
+                margin-top: 42px;
+                font-size: 18px;
+                font-weight: 500;
+              }
+
+              p.text {
+                margin-top: 12px;
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 18px;
+                width: 225px;
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              transition: transform ease .8s;
+
+              &:hover {
+                transform: scale(1.1);
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .services-originality{
+      margin-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+}

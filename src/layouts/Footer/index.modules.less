@@ -1,0 +1,115 @@
+.footer-container {
+  min-height: 13.75rem;
+  width: 100%;
+  padding: 1rem 3.75rem;
+  overflow-x: hidden;
+  background-color: #ebebeb;
+  // margin-top: 3.75rem;
+
+
+  .footer-logo__wrap {
+    img {
+      width: 5.375rem;
+      margin-top: 2.375rem;
+    }
+
+    p.company {
+      font-size: .625rem;
+      font-weight: bolder;
+    }
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 18% 18% 18% 20% 18%;
+
+    .content-item {
+      margin-top: 1.875rem;
+
+      .item-title {
+        font-size: .875rem;
+        font-weight: bold;
+        color: #1a1311;
+        letter-spacing: .25rem;
+      }
+
+      .item-content {
+        font-size: .5rem;
+        font-weight: 400;
+        color: #1a1311;
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 30% 30%;
+
+        // grid-row-gap: .5rem;
+        &>div {
+          height: 1.75rem;
+        }
+      }
+
+      &.contactWay .item-content,
+      &.relation .item-content,
+      &.headquartered .item-content {
+        grid-template-columns: 100%;
+      }
+
+      &.headquartered {
+        .item-content {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+
+          p {
+            width: 100%;
+            margin-bottom: .875rem;
+          }
+
+          .item-content__container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .item-content__wrap {
+              width: 100%;
+              height: 100%;
+
+              img {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: 1.125rem;
+                cursor: pointer;
+              }
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
+  .footer-recorded {
+    width: 100%;
+    height: 2rem;
+    font-size: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        color: #1a1311;
+      }
+
+      img {
+        width: .9rem;
+        height: .9rem;
+      }
+    }
+  }
+}

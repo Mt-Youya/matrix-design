@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "baseUrl": ".", // 如果 "paths" 存在，则必须指定
+    "target": "ESNext",
+    "useDefineForClassFields": true, // 对类字段使用 "define" 语义。 这是 Vue 工作所必需的
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true, // 启用所有严格的类型检查选项。
+    "jsx": "preserve", // Vue 需要 "preserve" 才能工作
+    "resolveJsonModule": true, // 允许导入 .json 文件
+    "isolatedModules": true, // 在使用 TypeScript 编译器不支持的功能（如 const 枚举）时防止编译错误。
+    "esModuleInterop": true, // 允许从没有默认导出的模块中进行默认导入。 这不会影响代码emit，只会影响类型检查。
+    "lib": ["ESNext", "DOM"], // 识别 "window" 和 "document" 需要 "DOM"
+    "skipLibCheck": true, // 跳过声明文件的类型检查。
+    "noEmit": true // 不 emit 输出.
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }] // 引用 tsconfig.node.json 文件
+}

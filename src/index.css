@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary-hue: 210;
+  --gray-hue: 240;
+  --color-primary: #867e76;
+  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
+  --color-secondary: #b2bbbe;
+  --color-tertiary: #b4a992;
+  --color-fourth: #7a7374;
+  --color-gray-100: hsl(var(--primary-hue), 47%, 94%);
+  --color-gray-200: hsl(var(--primary-hue), 26%, 75%);
+  --color-gray-300: hsl(var(--primary-hue), 24%, 64%);
+  --color-gray-400: hsl(var(--primary-hue), 16%, 41%);
+  --color-gray-500: hsl(var(--primary-hue), 44%, 25%);
+  --color-gray-600: hsl(var(--primary-hue), 48%, 15%);
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+
+  --transition: all 500ms ease;
+
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+
+  font-family: "Inter", sans-serif;
+
+  --default-editor: var(--true);
+  --border: none;
+  --transition: all 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --listIndent: 2.5em;
+  --listItemSpacing: 0.3em;
+  --true: initial;
+  --false: "";
+  --has-link-decoration: var(--true);
+  --has-transparent-header: 0;
+  --container-width: min(100%, var(--container-width-base));
+  --paletteColor1: #1c51c3;
+  --paletteColor2: #2872fa;
+  --paletteColor3: #212121;
+  --paletteColor4: #212121;
+  --paletteColor5: #ffffff;
+  --paletteColor6: #212121;
+  --paletteColor7: #fafbfc;
+  --paletteColor8: #ffffff;
+  --color: #424242;
+  --linkInitialColor: #1559ed;
+  --linkHoverColor: #256d17;
+  --selectionTextColor: #ffffff;
+  --selectionBackgroundColor: var(--paletteColor1);
+  --border-color: rgba(41, 42, 46, 0.11);
+  --headings-color: #212121;
+  --content-spacing: 2em;
+  --buttonMinHeight: 2.5rem;
+  --buttonShadow: none;
+  --buttonTransform: none;
+  --buttonTextInitialColor: #fffff1;
+  --buttonTextHoverColor: #fffff1;
+  --buttonInitialColor: #1c51c3;
+  --buttonHoverColor: #1046b2;
+  --button-border: none;
+  --buttonBorderRadius: 0.1875rem;
+  --button-padding: 0.3125rem 1.25rem;
+  --normal-container-max-width: 80.625rem;
+  --content-vertical-spacing: 1.25rem;
+  --narrow-container-max-width: 46.875rem;
+  --wide-offset: 8.125rem;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("Inter.var.woff2") format("woff2");
+}
+
+a {
+  text-decoration: none;
+  color: #1a1311;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+img {
+  object-fit: cover;
+  vertical-align: bottom !important;
+}
+
+input:focus:focus-visible {
+  outline: none;
+}

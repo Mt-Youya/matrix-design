@@ -1,0 +1,92 @@
+.cases-container {
+  padding-bottom: 3.75rem;
+  background-color: #fff;
+
+  img.cases-banner {
+    width: 100%;
+    height: 24.375rem;
+  }
+
+  .cases-box {
+    margin: 3.75rem 3.75rem 0;
+
+    .cases-menu {
+      height: 4rem;
+
+      ul.menu-list,
+      ul.menu-child {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        gap: 1rem;
+
+        li {
+          padding-right: 1.5rem;
+          padding-bottom: 1.125rem;
+          cursor: pointer;
+          color: #777;
+          font-weight: 400;
+          font-size: .75rem;
+
+          &:hover {
+            font-weight: bold;
+            color: #1a1311;
+          }
+
+          &.active {
+            font-weight: bold;
+            color: #1a1311;
+          }
+        }
+      }
+    }
+
+    .cases-content {
+      ul.content-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+
+        li {
+
+          .img {
+            width: 26.25rem;
+            height: 13.75rem;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              cursor: pointer;
+              transition: all .4s ease;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+
+          h3.item-title {
+            margin-top: .9375rem;
+            color: #1a1311;
+            font-size: .875rem;
+            font-weight: 400;
+          }
+
+          span.item-descrition {
+            margin-top: .75rem;
+            font-size: .625rem;
+            color: #8e8e8f;
+          }
+        }
+
+      }
+    }
+
+    .pagenation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
