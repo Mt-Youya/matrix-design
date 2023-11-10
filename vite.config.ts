@@ -4,7 +4,6 @@ import path from "path"
 // import setting from "./src/settings.json";
 import Compression from "vite-plugin-compression" // gzip文件压缩
 import svgrPlugin from "vite-plugin-svgr" // svg转react组件
-import importToCDN, { autoComplete } from "vite-plugin-cdn-import" // 允许指定 modules 在生产环境中使用 CDN 引入。
 import postcssPresetEnv from "postcss-preset-env" // postcss插件
 import { viteMockServe } from "vite-plugin-mock" // mock插件
 
@@ -78,38 +77,13 @@ export default defineConfig({
       // svg转react组件
       svgrOptions: {} // svgr options
     }),
-    // 文件太大再压缩,不然会导致浏览器加载(这里指解压)时间过长
     Compression({ threshold: 1024 * 1024 }), // gzip : over 1024kb compression
-    importToCDN({
-      modules: [
-        // 两种写法
-        // {
-        //   name: "react", // 模块名称
-        //   var: "React", // 全局变量名称 e.g.:  _  -->  loadsh
-        //   path: `umd/react.production.min.js` // 模块路径
-        // },
-        // {
-        //   name: "react-dom",
-        //   var: "ReactDOM",
-        //   path: `umd/react-dom.production.min.js`
-        // }
-        autoComplete("react"),
-        autoComplete("react-dom")
-      ]
-    }),
     viteMockServe()
   ],
   css: {
-    // javascriptEnabled  有什么用？
-    // less-loader 5.0 之后，需要设置 lessOptions 选项
-    // less-loader 5.0 之前，需要设置 javascriptEnabled 选项
-    // lessOptions: {
-    //   javascriptEnabled: true,
-    // }
     preprocessorOptions: {
-      // 配置less（其他样式解析用法一致）
       less: {
-        javascriptEnabled: true // 设置为true
+        javascriptEnabled: true
       }
     },
     modules: {

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite --open --host --mode development",
-    "build": "vite build --mode production"
+    "build": "vite build --mode production",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
